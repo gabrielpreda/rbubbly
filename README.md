@@ -37,7 +37,7 @@ To run the tests, you can load the project in RStudio and select *Build*/*Test P
 
 ## Example of usage
 
-The package includes an example R Markdown example *doc/test.Rmd*. This example used *r* package *gapminder* in order to exemplify the usage. You will need to install this package
+The package includes an example R Markdown example *example/example.Rmd*. This example used *r* package *gapminder* in order to exemplify the usage. You will need to install this package
 
 ````
 install.packages("gapminder")
@@ -70,6 +70,6 @@ rbubbly(gapminder, xcolumn, ycolumn,bubblecolumn,colorcolumn,slidercolumn,textco
 
 The following plot will appear.
 
-![Gapminder plot](man/figures/gapminder.png "Plot a mesh data")
+![Gapminder plot](man/figures/gapminder.png "Plot gapminder data")
 
 
