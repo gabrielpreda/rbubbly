@@ -26,7 +26,8 @@ rbubbly <- function(data, xcolumn, ycolumn, bubblecolumn, colorcolumn,
       text = textcolumn,
       hoverinfo = "text",
       type = 'scatter',
-      mode = 'markers'
+      mode = 'markers',
+      marker = list(opacity = 0.5),sizes = c(10, 500)
     ) %>%
     layout(
       xaxis = list(
