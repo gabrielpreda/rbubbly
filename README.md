@@ -43,28 +43,36 @@ The package includes an example R Markdown example *example/example.Rmd*. This e
 install.packages("gapminder")
 ````
 
+
 ### Dislay a bubbly plot 
 
-Please make sure you installed the package.
 
+## Load the package
+
+Please make sure you installed the `rbubbly` package.
+To install the package, you will need to include this line in your script/RMarkdown/Notebook
 
 ````
 #load the package
 library(rbubbly)
+````
 
+## Plot Gapminder Global Indicators
+
+With the data from `gapminder` you can display a plot similar with Gapminder plots, developed by Rosling.
+In this example, we will show `Gapminder Global Indicators`, with  `GDP per Capita` on x-axis and `Life Expectancy` on y-axis. For each `country` is shown a bubble. The bubbles size is corelated with the `population` size. Bubble colors are associated with the `continents` (one color for each continent).
+
+
+````
 #load the library gapminder
 library(gapminder)
 
-#define the entry parameters for rbubbly
-xcolumn = gapminder$gdpPercap
-ycolumn = gapminder$lifeExp
-bubblecolumn = gapminder$pop
-colorcolumn = gapminder$continent
-slidercolumn = gapminder$year
-textcolumn = gapminder$country
-
 #call the rbubbly function
-rbubbly(gapminder, xcolumn, ycolumn,bubblecolumn,colorcolumn,slidercolumn,textcolumn)
+rbubbly::  rbubbly(dataset = gapminder, x_column = gapminder$gdpPercap, y_column = gapminder$lifeExp,
+                 bubble_column = gapminder$pop, color_column = gapminder$continent,
+                 slider_column = gapminder$year, text_column = gapminder$country,
+                 x_title="GDP per Capita", y_title="Life Expectancy", title='Gapminder Global Indicators',
+                 x_is_log = TRUE, scale_bubble = 1)
 
 ````
 
