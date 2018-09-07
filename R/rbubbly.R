@@ -12,7 +12,6 @@ rbubbly <- function(dataset, x_column, y_column, bubble_column, color_column,
                     x_is_log=TRUE, y_is_log=FALSE,scale_bubble=1) {
 
   library(plotly)
-  library(RColorBrewer)
 
   if(x_is_log)
     xtype="log"
@@ -31,7 +30,7 @@ rbubbly <- function(dataset, x_column, y_column, bubble_column, color_column,
   smin = scale_bubble * sqrt(xmin*ymin)
   smax = scale_bubble * sqrt(xmax*ymax)
   p <-
-    plot_ly(data = data,
+    plot_ly(data = dataset,
       x = x_column,
       y = y_column,
       size = bubble_column,
