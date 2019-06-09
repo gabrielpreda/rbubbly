@@ -33,6 +33,6 @@ rbubbly::  rbubbly(dataset = gapminder, x_column = gapminder$gdpPercap, y_column
                  bubble_column = gapminder$pop, color_column = gapminder$continent,
                  slider_column = gapminder$year, text_column = gapminder$country,
                  x_title="GDP per Capita", y_title="Life Expectancy", title='Gapminder Global Indicators',
-                 x_is_log = TRUE, scale_bubble = 2)
+                 x_is_log = TRUE, scale_bubble = 1)
 ```
 }
