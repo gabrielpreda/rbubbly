@@ -13,6 +13,12 @@ output: html_document
 
 ```{r test_bubbly}
 #load gapminder data
+
+## if rbubbly is not installed, install it with the following commands
+#library(devtols)
+#install_github("gabrielpreda/rbubbly")
+
+library(rbubbly)
 library(gapminder)
 
 
