@@ -13,22 +13,27 @@ rbubbly <- function(dataset, x_column, y_column, bubble_column, color_column,
 
   library(plotly)
 
+  # set x_is_log flag
   if(x_is_log)
     xtype="log"
   else
     xtype=NA
 
+  # set y_is_log flag
   if(y_is_log)
     ytype="log"
   else
     ytype=NA
 
+
+  # Calculate scale factors
   xmin = min(x_column)
   xmax = max(x_column)
   ymin = min(y_column)
   ymax = max(y_column)
   smin = scale_bubble * sqrt(xmin*ymin)
   smax = scale_bubble * sqrt(xmax*ymax)
+
   p <-
     plot_ly(data = dataset,
       x = x_column,
